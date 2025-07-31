@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamification Marketing | แพลตฟอร์ม Gamification Marketing อันดับ 1 ของไทย</title>
+    <title>Varisoft x RewardinMe | แพลตฟอร์ม Gamification Marketing อันดับ 1 ของไทย</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +33,20 @@
             border-color: #EC4899;
             box-shadow: 0 10px 20px rgba(236, 72, 153, 0.1);
         }
+        /* CSS for slider transition */
+        .fade-in {
+            animation: fadeIn 0.7s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .modal-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .modal-content {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -40,12 +54,12 @@
     <!-- Header -->
     <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold gradient-text">Gamification Marketing</h1>
+            <h1 class="text-2xl font-bold gradient-text">Varisoft x RewardinMe</h1>
             <div class="hidden md:flex items-center space-x-6">
                 <a href="#features" class="text-gray-600 hover:text-pink-500">ฟีเจอร์</a>
                 <a href="#use-cases" class="text-gray-600 hover:text-pink-500">ตัวอย่างแคมเปญ</a>
                 <a href="#pricing" class="text-gray-600 hover:text-pink-500">ราคา</a>
-                <a href="#contact" class="bg-pink-500 text-white px-4 py-2 rounded-full font-semibold cta-button">ขอดูเดโม่</a>
+                <a href="#contact" class="bg-pink-500 text-white px-4 py-2 rounded-full font-semibold cta-button open-modal-btn">ขอดูเดโม่</a>
             </div>
             <button class="md:hidden text-gray-800">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -65,10 +79,18 @@
         </p>
         <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
             <a href="#pricing" class="w-full sm:w-auto bg-indigo-600 text-white px-8 py-4 rounded-full font-bold text-lg cta-button">สร้างเกมแรกของคุณฟรี</a>
-            <a href="#contact" class="w-full sm:w-auto bg-gray-200 text-gray-800 px-8 py-4 rounded-full font-bold text-lg cta-button">พูดคุยกับผู้เชี่ยวชาญ</a>
+            <a href="#contact" class="w-full sm:w-auto bg-gray-200 text-gray-800 px-8 py-4 rounded-full font-bold text-lg cta-button open-modal-btn">พูดคุยกับผู้เชี่ยวชาญ</a>
         </div>
-        <div class="mt-16">
-            <img src="https://placehold.co/1200x600/E0E7FF/4F46E5?text=แสดงตัวอย่างเกมบนมือถือและคอมพิวเตอร์" alt="ตัวอย่างเกมบนอุปกรณ์ต่างๆ" class="rounded-2xl shadow-2xl mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/1200x600/E0E7FF/4F46E5?text=Gamification Marketing+Gamification';">
+        <div class="mt-16 max-w-4xl mx-auto">
+            <div class="aspect-video rounded-2xl shadow-2xl overflow-hidden" style="min-height: 600px;">
+                <iframe 
+                    src="https://www.youtube.com/embed/FalbXv05xU8?autoplay=1&mute=1&loop=1&playlist=FalbXv05xU8&controls=0&showinfo=0&rel=0" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    class="w-full h-full">
+                </iframe>
+            </div>
         </div>
     </main>
 
@@ -171,32 +193,39 @@
     </section>
 
     <!-- Use Cases Section -->
-    <section id="use-cases" class="py-16">
+    <section id="use-cases" class="py-16 bg-indigo-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
                 <h3 class="text-3xl md:text-4xl font-bold text-gray-900">สร้างสรรค์แคมเปญได้ทุกรูปแบบ</h3>
-                <p class="mt-4 text-lg text-gray-600">ดูไอเดียการใช้ Gamification Marketing เพื่อบรรลุเป้าหมายทางการตลาดของคุณ</p>
+                <p class="mt-4 text-lg text-gray-600">ดูไอเดียการใช้ Varisoft x RewardinMe เพื่อบรรลุเป้าหมายทางการตลาดของคุณ</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <img src="https://placehold.co/600x400/FBCFE8/9D174D?text=เกมวงล้อลุ้นโชค" alt="เกมวงล้อลุ้นโชค" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                    <img src="https://cdn-rewardin-me-01.s3.ap-southeast-1.amazonaws.com/uploads/news/1bd6f33abf4c8bb56df98a36f8591636.jpg" alt="เกมวงล้อลุ้นโชคสำหรับ E-commerce" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h4 class="text-xl font-bold">กระตุ้นยอดขาย E-commerce</h4>
                         <p class="mt-2 text-gray-600">ใช้ "เกมวงล้อลุ้นโชค" แจกส่วนลดพิเศษสำหรับแคมเปญ 11.11 หรือ Flash Sale</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <img src="https://placehold.co/600x400/D1FAE5/065F46?text=เกมตอบคำถาม" alt="เกมตอบคำถาม" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                    <img src="https://cdn-rewardin-me-01.s3.ap-southeast-1.amazonaws.com/uploads/news/226beb9bd7d1038833cf489cef8d7acc.jpg" alt="เกมตอบคำถามเปิดตัวสินค้าใหม่" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h4 class="text-xl font-bold">เปิดตัวสินค้าใหม่</h4>
                         <p class="mt-2 text-gray-600">ใช้ "เกมทายภาพ" หรือ "เกมตอบคำถาม" เพื่อสร้างการรับรู้และให้ข้อมูลเกี่ยวกับสินค้าใหม่</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <img src="https://placehold.co/600x400/DBEAFE/1E40AF?text=เกมสะสมแต้ม" alt="เกมสะสมแต้ม" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                    <img src="https://cdn-rewardin-me-01.s3.ap-southeast-1.amazonaws.com/uploads/news/4d0f694e01fff130c4ee36b3b2ee10aa.jpg" alt="เกมสะสมแต้มสร้าง Brand Loyalty" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h4 class="text-xl font-bold">สร้าง Brand Loyalty</h4>
                         <p class="mt-2 text-gray-600">ใช้ "เกมสะสมแต้ม" หรือสร้าง Mission ให้ลูกค้าทำเพื่อแลกของรางวัลสุดพิเศษ</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <img src="https://cdn-rewardin-me-01.s3.ap-southeast-1.amazonaws.com/uploads/news/3d5a07eeea70003065736c0d48814a67.jpg" alt="เกมสแกน QR Code สำหรับหน้าร้านและอีเวนต์" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold">เพิ่ม Traffic ให้หน้าร้าน/อีเวนต์</h4>
+                        <p class="mt-2 text-gray-600">ใช้ "เกมสแกน QR Code" ที่หน้าร้านหรือในงานอีเวนต์เพื่อดึงดูดคนและเก็บ Lead</p>
                     </div>
                 </div>
             </div>
@@ -204,24 +233,62 @@
     </section>
 
     <!-- Social Proof -->
-    <section class="py-16 bg-indigo-50">
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">แบรนด์ชั้นนำที่ไว้วางใจ Gamification Marketing</h3>
-                <div class="mt-8 flex justify-center items-center space-x-8 md:space-x-12 grayscale opacity-60">
-                     <img src="https://placehold.co/150x50/FFFFFF/CCCCCC?text=Brand+A" alt="โลโก้แบรนด์ A" class="h-8 md:h-10" onerror="this.onerror=null;this.src='https://placehold.co/150x50';">
-                     <img src="https://placehold.co/150x50/FFFFFF/CCCCCC?text=Agency+B" alt="โลโก้เอเจนซี่ B" class="h-8 md:h-10" onerror="this.onerror=null;this.src='https://placehold.co/150x50';">
-                     <img src="https://placehold.co/150x50/FFFFFF/CCCCCC?text=Brand+C" alt="โลโก้แบรนด์ C" class="h-8 md:h-10" onerror="this.onerror=null;this.src='https://placehold.co/150x50';">
-                     <img src="https://placehold.co/150x50/FFFFFF/CCCCCC?text=Retailer+D" alt="โลโก้รีเทล D" class="h-8 md:h-10" onerror="this.onerror=null;this.src='https://placehold.co/150x50';">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">แบรนด์ชั้นนำที่ไว้วางใจ Varisoft x RewardinMe</h3>
+                <div class="mt-8 flex justify-center items-center flex-wrap gap-x-8 md:gap-x-12 gap-y-6 opacity-70">
+                     <img src="https://cdn-rewardin-me-01.s3.ap-southeast-1.amazonaws.com/landing/assets/images/main/client/maybank.webp" alt="โลโก้ Maybank" class="h-10 md:h-14">
+                     <img src="https://cdn-rewardin-me-01.s3.ap-southeast-1.amazonaws.com/landing/assets/images/main/client/cuckoo.webp" alt="โลโก้ Cuckoo" class="h-10 md:h-14">
+                     <img src="https://cdn-rewardin-me-01.s3.ap-southeast-1.amazonaws.com/landing/assets/images/main/client/tiger.webp" alt="โลโก้ Tiger" class="h-10 md:h-14">
+                     <img src="https://cdn-rewardin-me-01.s3.ap-southeast-1.amazonaws.com/landing/assets/images/main/client/yeos.webp" alt="โลโก้ Yeo's" class="h-10 md:h-14">
+                     <img src="https://cdn-rewardin-me-01.s3.ap-southeast-1.amazonaws.com/landing/assets/images/main/client/cbinsurance.webp" alt="โลโก้ CB Insurance" class="h-10 md:h-14">
+                     <img src="https://cdn-rewardin-me-01.s3.ap-southeast-1.amazonaws.com/landing/assets/images/main/client/dramovie.webp" alt="โลโก้ Dramovie" class="h-10 md:h-14">
+                     <img src="https://cdn-rewardin-me-01.s3.ap-southeast-1.amazonaws.com/landing/assets/images/main/client/Sports-Paragon.webp" alt="โลโก้ Sports Paragon" class="h-10 md:h-14">
+                     <img src="https://cdn-rewardin-me-01.s3.ap-southeast-1.amazonaws.com/landing/assets/images/main/client/herbalinespa.webp" alt="โลโก้ Ataplus" class="h-10 md:h-14">
                 </div>
             </div>
-            <div class="max-w-3xl mx-auto mt-12 bg-white p-8 rounded-2xl shadow-lg text-center">
-                <p class="text-xl italic text-gray-700">"Gamification Marketing ช่วยให้แคมเปญ 11.11 ของเรามี Engagement เพิ่มขึ้น 300% และเก็บ Lead ได้มากกว่าเป้าถึง 2 เท่า แพลตฟอร์มใช้งานง่ายมากและทีมงานก็ซัพพอร์ตดีเยี่ยมครับ"</p>
-                <div class="mt-6">
-                    <p class="font-bold text-gray-900">คุณสมชาย ใจดี</p>
-                    <p class="text-gray-500">Marketing Director, ABC E-commerce</p>
+            
+            <!-- Testimonial Slider -->
+            <div class="max-w-3xl mx-auto mt-12 relative">
+                <div id="testimonial-slider-container">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide bg-white p-8 rounded-2xl shadow-lg text-center">
+                        <p class="text-xl italic text-gray-700">"Varisoft x RewardinMe ช่วยให้แคมเปญ 11.11 ของเรามี Engagement เพิ่มขึ้น 300% และเก็บ Lead ได้มากกว่าเป้าถึง 2 เท่า แพลตฟอร์มใช้งานง่ายมากและทีมงานก็ซัพพอร์ตดีเยี่ยมครับ"</p>
+                        <div class="mt-6">
+                            <p class="font-bold text-gray-900">Marketing Director</p>
+                            <p class="text-gray-500">Sport Paragon</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide bg-white p-8 rounded-2xl shadow-lg text-center hidden">
+                        <p class="text-xl italic text-gray-700">"การเปิดตัวสินค้าใหม่ของเราประสบความสำเร็จอย่างล้นหลามด้วยเกมทายภาพจาก Varisoft x RewardinMe สร้างกระแสในโซเชียลได้ดีมากค่ะ"</p>
+                        <div class="mt-6">
+                            <p class="font-bold text-gray-900">Brand Manager</p>
+                            <p class="text-gray-500">Tiger Beer</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide bg-white p-8 rounded-2xl shadow-lg text-center hidden">
+                        <p class="text-xl italic text-gray-700">"เรานำเสนอโซลูชัน Gamification ให้กับลูกค้าหลายรายด้วยแพลตฟอร์มนี้ ช่วยให้เราปิดดีลได้ง่ายขึ้นและลูกค้าก็แฮปปี้กับผลลัพธ์มาก"</p>
+                        <div class="mt-6">
+                            <p class="font-bold text-gray-900">Agency Director</p>
+                            <p class="text-gray-500">DRAMVIE</p>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="testimonial-slide bg-white p-8 rounded-2xl shadow-lg text-center hidden">
+                        <p class="text-xl italic text-gray-700">"เกมสะสมแต้มช่วยเพิ่มการกลับมาซื้อซ้ำของลูกค้าได้อย่างเห็นได้ชัด เป็นเครื่องมือสร้าง Loyalty ที่ยอดเยี่ยมจริงๆ ค่ะ"</p>
+                        <div class="mt-6">
+                            <p class="font-bold text-gray-900">CRM Manager</p>
+                            <p class="text-gray-500">HerbaLine</p>
+                        </div>
+                    </div>
                 </div>
+                <!-- Slider Dots -->
+                <div id="slider-dots" class="flex justify-center space-x-3 mt-8"></div>
             </div>
+
         </div>
     </section>
 
@@ -234,42 +301,44 @@
             </div>
             <div class="grid lg:grid-cols-3 gap-8 items-center">
                 <!-- Starter Plan -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border flex flex-col h-full">
                     <h4 class="text-2xl font-bold">Starter</h4>
                     <p class="mt-2 text-gray-600">สำหรับ SME และทดลองตลาด</p>
-                    <p class="mt-6 text-4xl font-extrabold">฿9,900<span class="text-lg font-medium text-gray-500">/เดือน</span></p>
-                    <ul class="mt-6 space-y-4 text-gray-600">
-                        <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>1 แคมเปญ</li>
-                        <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>10 เทมเพลตพื้นฐาน</li>
-                        <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>1,000 ผู้เล่น/เดือน</li>
-                        <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>รายงานผลเบื้องต้น</li>
+                    <p class="mt-6 text-4xl font-extrabold">฿49,000<span class="text-lg font-medium text-gray-500">/เดือน</span></p>
+                    <ul class="mt-6 space-y-4 text-gray-600 flex-grow">
+                        <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>1 แคมเปญ</span></li>
+                        <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>10 เทมเพลตพื้นฐาน</span></li>
+                        <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>1,000 ผู้เล่น/เดือน</span></li>
+                        <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>รายงานผลเบื้องต้น</span></li>
+                        <li class="flex items-start"><svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>มีทีมที่ปรึกษาช่วยออกแบบ</span></li>
                     </ul>
-                    <a href="#" class="mt-8 block w-full text-center bg-gray-200 text-gray-800 px-6 py-3 rounded-full font-bold cta-button">เริ่มต้นใช้งาน</a>
+                    <button class="mt-8 w-full text-center bg-gray-200 text-gray-800 px-6 py-3 rounded-full font-bold cta-button open-modal-btn">เริ่มต้นใช้งาน</button>
                 </div>
 
                 <!-- Growth Plan (Most Popular) -->
-                <div class="bg-indigo-600 text-white p-10 rounded-3xl shadow-2xl relative">
+                <div class="bg-indigo-600 text-white p-10 rounded-3xl shadow-2xl relative flex flex-col h-full">
                     <span class="absolute top-0 -translate-y-1/2 bg-pink-500 text-white text-sm font-bold px-4 py-1 rounded-full">ยอดนิยม</span>
                     <h4 class="text-2xl font-bold">Growth</h4>
                     <p class="mt-2 opacity-80">สำหรับแบรนด์และเอเจนซี่</p>
-                    <p class="mt-6 text-4xl font-extrabold">฿29,900<span class="text-lg font-medium opacity-80">/เดือน</span></p>
-                    <ul class="mt-6 space-y-4">
-                        <li class="flex items-center"><svg class="h-5 w-5 text-green-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>5 แคมเปญ</li>
-                        <li class="flex items-center"><svg class="h-5 w-5 text-green-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>เข้าถึงทุกเทมเพลต (30+)</li>
-                        <li class="flex items-center"><svg class="h-5 w-5 text-green-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>10,000 ผู้เล่น/เดือน</li>
-                        <li class="flex items-center"><svg class="h-5 w-5 text-green-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>รายงานผลขั้นสูง</li>
-                        <li class="flex items-center"><svg class="h-5 w-5 text-green-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>ผู้จัดการบัญชี</li>
+                    <p class="mt-6 text-4xl font-extrabold">฿89,000<span class="text-lg font-medium opacity-80">/เดือน</span></p>
+                    <ul class="mt-6 space-y-4 flex-grow">
+                        <li class="flex items-start"><svg class="h-5 w-5 text-green-400 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>5 แคมเปญ</span></li>
+                        <li class="flex items-start"><svg class="h-5 w-5 text-green-400 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>เข้าถึงทุกเทมเพลต (30+)</span></li>
+                        <li class="flex items-start"><svg class="h-5 w-5 text-green-400 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>10,000 ผู้เล่น/เดือน</span></li>
+                        <li class="flex items-start"><svg class="h-5 w-5 text-green-400 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>รายงานผลขั้นสูง</span></li>
+                        <li class="flex items-start"><svg class="h-5 w-5 text-green-400 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>ผู้จัดการบัญชี</span></li>
+                        <li class="flex items-start"><svg class="h-5 w-5 text-green-400 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>มีทีมที่ปรึกษาช่วยออกแบบ</span></li>
                     </ul>
-                    <a href="#" class="mt-8 block w-full text-center bg-white text-indigo-600 px-6 py-3 rounded-full font-bold cta-button">เลือกแผนนี้</a>
+                    <button class="mt-8 w-full text-center bg-white text-indigo-600 px-6 py-3 rounded-full font-bold cta-button open-modal-btn">เลือกแผนนี้</button>
                 </div>
 
                 <!-- Enterprise Plan -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border flex flex-col h-full">
                     <h4 class="text-2xl font-bold">Enterprise</h4>
                     <p class="mt-2 text-gray-600">สำหรับองค์กรขนาดใหญ่</p>
                     <p class="mt-6 text-4xl font-extrabold">Custom</p>
-                    <p class="mt-2 text-gray-600">ไม่จำกัดแคมเปญ, Custom Branding, API Integration, และบริการซัพพอร์ตระดับพรีเมียม</p>
-                    <a href="#contact" class="mt-8 block w-full text-center bg-gray-800 text-white px-6 py-3 rounded-full font-bold cta-button">ติดต่อฝ่ายขาย</a>
+                    <p class="mt-2 text-gray-600 flex-grow">ไม่จำกัดแคมเปญ, Custom Branding, API Integration, และบริการซัพพอร์ตระดับพรีเมียม</p>
+                    <button class="mt-8 w-full text-center bg-gray-800 text-white px-6 py-3 rounded-full font-bold cta-button open-modal-btn">ติดต่อฝ่ายขาย</button>
                 </div>
             </div>
         </div>
@@ -280,9 +349,9 @@
         <div class="container mx-auto px-6">
             <div class="bg-indigo-700 text-white p-12 rounded-3xl text-center">
                 <h3 class="text-3xl md:text-4xl font-bold">พร้อมเปลี่ยนการตลาดของคุณ<br>ให้สนุกและทรงพลังกว่าเดิมหรือยัง?</h3>
-                <p class="mt-4 text-lg opacity-80 max-w-2xl mx-auto">ให้ผู้เชี่ยวชาญของเราสาธิตวิธีการทำงานของ Gamification Marketing และช่วยคุณวางแผนแคมเปญ Gamification ที่จะสร้างผลลัพธ์ทางธุรกิจได้อย่างน่าทึ่ง</p>
+                <p class="mt-4 text-lg opacity-80 max-w-2xl mx-auto">ให้ผู้เชี่ยวชาญของเราสาธิตวิธีการทำงานของ Varisoft x RewardinMe และช่วยคุณวางแผนแคมเปญ Gamification ที่จะสร้างผลลัพธ์ทางธุรกิจได้อย่างน่าทึ่ง</p>
                 <div class="mt-8">
-                    <a href="#" class="bg-white text-indigo-700 px-8 py-4 rounded-full font-bold text-lg cta-button">ขอดูเดโม่ เดี๋ยวนี้!</a>
+                    <button class="bg-white text-indigo-700 px-8 py-4 rounded-full font-bold text-lg cta-button open-modal-btn">ขอดูเดโม่ เดี๋ยวนี้!</button>
                 </div>
             </div>
         </div>
@@ -293,7 +362,7 @@
         <div class="container mx-auto px-6 py-12">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h4 class="text-xl font-bold">Gamification Marketing</h4>
+                    <h4 class="text-xl font-bold">Varisoft x RewardinMe</h4>
                     <p class="mt-4 text-gray-400">แพลตฟอร์ม Gamification Marketing อันดับ 1 ของไทย</p>
                 </div>
                 <div>
@@ -322,10 +391,174 @@
                 </div>
             </div>
             <div class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Gamification Marketing. All Rights Reserved.</p>
+                <p>&copy; 2025 Varisoft x RewardinMe. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+    
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50 modal-overlay">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md mx-4 modal-content transform scale-95 opacity-0">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900">ติดต่อเรา</h3>
+                <button id="close-modal-btn" class="text-gray-400 hover:text-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <p class="text-gray-600 mb-6">กรุณากรอกข้อมูลเพื่อให้ทีมงานผู้เชี่ยวชาญติดต่อกลับโดยเร็วที่สุด</p>
+            <form id="contact-form">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 font-semibold mb-2">ชื่อ-นามสกุล</label>
+                    <input type="text" name="Name" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                </div>
+                <div class="mb-6">
+                    <label for="phone" class="block text-gray-700 font-semibold mb-2">เบอร์โทรศัพท์</label>
+                    <input type="tel" name="Phone" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                </div>
+                <button type="submit" id="submit-form-btn" class="w-full bg-indigo-600 text-white px-6 py-3 rounded-full font-bold cta-button">ส่งข้อมูล</button>
+            </form>
+            <div id="form-status" class="mt-4 text-center"></div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Testimonial Slider Logic
+            const sliderContainer = document.getElementById('testimonial-slider-container');
+            if (sliderContainer) {
+                const slides = sliderContainer.getElementsByClassName('testimonial-slide');
+                const dotsContainer = document.getElementById('slider-dots');
+                let currentSlide = 0;
+                let slideInterval;
+
+                // Create dots
+                for (let i = 0; i < slides.length; i++) {
+                    const dot = document.createElement('button');
+                    dot.classList.add('slider-dot', 'w-3', 'h-3', 'rounded-full', 'bg-gray-300', 'hover:bg-indigo-500', 'transition-colors');
+                    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                    dot.addEventListener('click', () => {
+                        showSlide(i);
+                        clearInterval(slideInterval);
+                        slideInterval = setInterval(autoPlay, 5000);
+                    });
+                    dotsContainer.appendChild(dot);
+                }
+                const dots = dotsContainer.getElementsByClassName('slider-dot');
+
+                function showSlide(n) {
+                    currentSlide = n;
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].classList.add('hidden');
+                        slides[i].classList.remove('fade-in');
+                        dots[i].classList.remove('bg-indigo-600');
+                        dots[i].classList.add('bg-gray-300');
+                    }
+                    slides[n].classList.remove('hidden');
+                    slides[n].classList.add('fade-in');
+                    dots[n].classList.add('bg-indigo-600');
+                    dots[n].classList.remove('bg-gray-300');
+                }
+
+                function autoPlay() {
+                    let nextSlide = (currentSlide + 1) % slides.length;
+                    showSlide(nextSlide);
+                }
+
+                showSlide(currentSlide);
+                slideInterval = setInterval(autoPlay, 5000);
+            }
+            
+            // Modal Logic
+            const modal = document.getElementById('contact-modal');
+            const modalContent = modal.querySelector('.modal-content');
+            const openModalButtons = document.querySelectorAll('.open-modal-btn');
+            const closeModalButton = document.getElementById('close-modal-btn');
+
+            function openModal() {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modalContent.classList.remove('scale-95', 'opacity-0');
+                    modalContent.classList.add('scale-100', 'opacity-100');
+                }, 10);
+            }
+
+            function closeModal() {
+                modalContent.classList.remove('scale-100', 'opacity-100');
+                modalContent.classList.add('scale-95', 'opacity-0');
+                modal.classList.add('opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }, 300);
+            }
+
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openModal();
+                });
+            });
+
+            closeModalButton.addEventListener('click', closeModal);
+
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Google Sheet Form Submission
+            const form = document.getElementById('contact-form');
+            const statusDiv = document.getElementById('form-status');
+            const submitButton = document.getElementById('submit-form-btn');
+            
+            // =================================================================================
+            // ข้อสำคัญ: กรุณานำ URL ที่ได้จากการ Deploy Google Apps Script มาใส่ที่นี่
+            // ดูวิธีการตั้งค่าได้ที่: https://github.com/jamiewilson/form-to-google-sheets
+            // =================================================================================
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyEnghtCGuoZbDYCWamNn2KQkbUx9ondGpDurzlChn5d0BZDVtlAYzWBWKmUGtpScY/exec'; 
+
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                
+                if (scriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+                    statusDiv.innerHTML = `<p class="text-red-500">ข้อผิดพลาด: กรุณาตั้งค่า Google Apps Script URL</p>`;
+                    return;
+                }
+
+                submitButton.disabled = true;
+                submitButton.innerHTML = `<span class="animate-spin inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full" role="status"></span> กำลังส่ง...`;
+                statusDiv.innerHTML = '';
+
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        if (response.ok) {
+                            statusDiv.innerHTML = `<p class="text-green-500 font-semibold">ส่งข้อมูลสำเร็จ! ทีมงานจะติดต่อกลับโดยเร็วที่สุด</p>`;
+                            form.reset();
+                            setTimeout(() => {
+                                closeModal();
+                                statusDiv.innerHTML = ''; // Clear status on next open
+                            }, 2500);
+                        } else {
+                            throw new Error('Network response was not ok.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        statusDiv.innerHTML = `<p class="text-red-500">เกิดข้อผิดพลาด! กรุณาลองใหม่อีกครั้ง</p>`;
+                    })
+                    .finally(() => {
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = 'ส่งข้อมูล';
+                    });
+            });
+        });
+    </script>
 
 </body>
 </html>
